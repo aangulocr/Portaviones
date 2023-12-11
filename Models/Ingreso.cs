@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -16,13 +17,17 @@ namespace Portaviones.Models
 
         public string NombreFantasia { get; set; }
 
-        public float DimensionAla { get; set; }
+        [DisplayFormat(DataFormatString = "{0:N2}")]
+        public Decimal DimensionAla { get; set; }
 
-        public float Alto { get; set; }
+        [DisplayFormat(DataFormatString = "{0:N2}")]
+        public Decimal Alto { get; set; }
 
-        public float Largo { get; set; }
+        [DisplayFormat(DataFormatString = "{0:N2}")]
+        public Decimal Largo { get; set; }
 
-        public float DistanciaVuelo { get; set; }
+        [DisplayFormat(DataFormatString = "{0:N2}")]
+        public Decimal DistanciaVuelo { get; set; }
 
         public DateTime Fecha { get; set; }
 
