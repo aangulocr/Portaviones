@@ -1,0 +1,38 @@
+﻿
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Serie</th>
+				<th>Marca</th>
+				<th>Modelo</th>
+				<th>Nombre de Fantasia</th>
+				<th>Detalle</th>
+				<th>Tecnico</th>
+			</tr>
+		</thead>
+		<tbody>
+			@if (ViewBag.Registro != null)
+			{
+				foreach (var item in @ViewBag.Registro)
+				{
+					<tr>
+
+						<td>@item.Serie</td>
+						<td>@item.Marca</td>
+						<td>@item.Modelo</td>
+						<td>@item.NombreFantasia</td>
+						<td>@item.Detalle</td>
+						<td>@item.Tecnico</td>
+
+						@*<td>
+								<a class="btn btn-primary btn-sm" href="@Url.Action("DevolucionHerramienta", "Home", new { idherramienta = item.Id_herramienta })"><i class="bi bi-check2-circle"></i> Devolver</a>
+
+							</td>*@
+					</tr>
+				}
+			}
+		</tbody>
+
+	</table>
+</div>

@@ -1,0 +1,152 @@
+﻿@model Portaviones.Models.Ingreso
+@*@model List<Portaviones.Models.Ingreso>*@
+
+@{
+	ViewBag.Title = "Ingreso";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ingreso</h2>
+
+
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+
+	<hr />
+	<div class="form-group">
+		<div class="col-md-offset-2 col-md-10">
+			<input type="submit" value="Agregar a Lista" class="btn btn-primary" />
+		</div>
+		<br />
+	</div>
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+	<section>
+		@if (ViewBag.Error != null)
+		{
+			<div class="alert alert-danger" role="alert">
+				@ViewBag.Error
+			</div>
+		}
+	</section>
+
+	<table class="table table-bordered table-striped">
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.Serie, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td>
+				@Html.EditorFor(model => model.Serie, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.Serie, "", new { @class = "text-danger" })
+			</td>
+			<td>
+				@Html.LabelFor(model => model.Marca, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td>
+				@Html.EditorFor(model => model.Marca, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.Marca, "", new { @class = "text-danger" })
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.Modelo, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td>
+				@Html.EditorFor(model => model.Modelo, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.Modelo, "", new { @class = "text-danger" })
+			</td>
+			<td>
+				@Html.LabelFor(model => model.NombreFantasia, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td>
+				@Html.EditorFor(model => model.NombreFantasia, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.NombreFantasia, "", new { @class = "text-danger" })
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.DimensionAla, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td>
+				@Html.EditorFor(model => model.DimensionAla, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.DimensionAla, "", new { @class = "text-danger" })
+			</td>
+			<td>
+				@Html.LabelFor(model => model.Alto, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td>
+				@Html.EditorFor(model => model.Alto, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.Alto, "", new { @class = "text-danger" })
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.Largo, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td>
+				@Html.EditorFor(model => model.Largo, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.Largo, "", new { @class = "text-danger" })
+			</td>
+			<td>
+				@Html.LabelFor(model => model.DistanciaVuelo, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td>
+				@Html.EditorFor(model => model.DistanciaVuelo, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.DistanciaVuelo, "", new { @class = "text-danger" })
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td>
+				@Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+			</td>
+			<td>
+				@Html.LabelFor(model => model.Tecnico, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td>
+				@Html.EditorFor(model => model.Tecnico, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.Tecnico, "", new { @class = "text-danger" })
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "control-label col-md-2" })
+			</td>
+			<td class="checkbox">
+				@Html.EditorFor(model => model.Activo, new { htmlAttributes = new { @checked = "checked" } })
+				@*@Html.EditorFor (model => model.Activo, htmlAttributes: new { @checked = true} )*@
+
+				@*<input type="checkbox" name="Activo" checked="checked" />*@
+				@Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
+			</td>
+		</tr>
+
+	</table>
+}
+
+<hr />
+@if (ViewBag.Lista != null)
+{
+	@Html.Partial("IngresoForm", Model)
+}
+
+
+
+
+<div>
+	@Html.ActionLink("Menu Principal", "Index")
+</div>
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,42 @@
+﻿@*@model List<Portaviones.Models.Ingreso>*@
+
+<div>
+	<table class="table table-striped table-responsive">
+		<thead>
+			<tr>
+				<th>Serie</th>
+				<th>Marca</th>
+				<th>Modelo</th>
+
+				<th>Nombre Fantasia</th>
+				<th>Dimension Ala</th>
+				<th>Alto</th>
+				<th>Largo</th>
+				<th>Distancia Vuelo</th>
+
+				<th>Fecha</th>
+				<th>Tecnico</th>
+				<th>Activo</th>				
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var ingreso in ViewBag.Lista)
+			{
+				<tr>
+					<td>@ingreso.Serie</td>
+					<td>@ingreso.Marca</td>
+					<td>@ingreso.Modelo</td>
+					<td>@ingreso.NombreFantasia</td>
+					<td>@ingreso.DimensionAla</td>
+					<td>@ingreso.Alto</td>
+					<td>@ingreso.Largo</td>
+					<td>@ingreso.DistanciaVuelo</td>
+					<td>@ingreso.Fecha</td>
+					<td>@ingreso.Tecnico</td>
+					<td>@ingreso.Activo</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
