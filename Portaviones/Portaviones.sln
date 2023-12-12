@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portaviones", "Portaviones.csproj", "{8FED33D4-D72B-452C-BB38-56295E80ED4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_REST", "..\WEB_REST\WEB_REST.csproj", "{A143BF5C-0472-4429-B49C-E1B9551F8A86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8FED33D4-D72B-452C-BB38-56295E80ED4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FED33D4-D72B-452C-BB38-56295E80ED4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FED33D4-D72B-452C-BB38-56295E80ED4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A143BF5C-0472-4429-B49C-E1B9551F8A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A143BF5C-0472-4429-B49C-E1B9551F8A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A143BF5C-0472-4429-B49C-E1B9551F8A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A143BF5C-0472-4429-B49C-E1B9551F8A86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

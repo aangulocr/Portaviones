@@ -9,7 +9,7 @@ namespace Portaviones.Models
     public class Ingreso
     {
 
-        public int Serie { get; set; }
+        public string Serie { get; set; }
 
         public string Marca { get; set; }
 

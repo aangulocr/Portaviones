@@ -124,6 +124,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Aterrizaje.cs" />
+    <Compile Include="Models\Despegue.cs" />
     <Compile Include="Models\Ingreso.cs" />
     <Compile Include="Models\Retiro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -160,6 +162,8 @@
     <Content Include="Content\bootstrap-icons\font\bootstrap-icons.json" />
     <Content Include="Content\bootstrap-icons\font\fonts\bootstrap-icons.woff" />
     <Content Include="Content\bootstrap-icons\font\fonts\bootstrap-icons.woff2" />
+    <Content Include="BaseDatos\InventarioAviones.bacpac" />
+    <Content Include="BaseDatos\BD_Scripts.7z" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -187,6 +191,10 @@
     <Content Include="Views\Home\IngresoForm.cshtml" />
     <Content Include="Views\Home\Retiro.cshtml" />
     <Content Include="Views\Home\RetiroForm.cshtml" />
+    <Content Include="Views\Home\ListarAviones.cshtml" />
+    <Content Include="Views\Home\DespegueAterrizaje.cshtml" />
+    <Content Include="Views\Home\Despegue.cshtml" />
+    <Content Include="Views\Home\Aterrizaje.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

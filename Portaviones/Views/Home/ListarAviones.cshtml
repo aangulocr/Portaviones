@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Portaviones.Models.Ingreso>
+
+@{
+    ViewBag.Title = "ListarAviones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListarAviones</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreFantasia)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tecnico)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreFantasia)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tecnico)
+        </td>
+    </tr>
+}
+
+</table>

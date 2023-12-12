@@ -18,7 +18,8 @@
 		<div class="form-group">
 			@Html.LabelFor(model => model.Serie, htmlAttributes: new { @class = "control-label col-md-2" })
 			<div class="col-md-10">
-				@Html.EditorFor(model => model.Serie, new { htmlAttributes = new { @class = "form-control" } })
+				@*@Html.EditorFor(model => model.Serie, new { htmlAttributes = new { @class = "form-control" } })*@
+				<input type="text" name="Serie" value="" />
 				@Html.ValidationMessageFor(model => model.Serie, "", new { @class = "text-danger" })
 			</div>
 			<br />
@@ -86,6 +87,8 @@
 
 <hr />
 
+
+
 @if (ViewBag.Boton == "Agregar")
 {
 	@Html.Partial("RetiroForm", Model)
@@ -96,7 +99,7 @@
 
 
 <div>
-	@Html.ActionLink("Menu Principal", "Index")
+	@Html.ActionLink("Guardar", "Index")
 </div>
 
 @section Scripts {

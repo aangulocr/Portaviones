@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "DespegueAterrizaje";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DespegueAterrizaje</h2>
+
+<main>
+	<section class="row" aria-labelledby="aspnetTitle">
+		<h1 id="title">PAGINA PRINCIPAL</h1>
+		<p class="lead">Programa que lleva el control de los aviones dentro del Portaviones</p>
+	</section>
+
+	<div class="row">
+		<section class="col-md-3" aria-labelledby="librariesTitle">
+			<h2 id="librariesTitle">Despegue de Aviones</h2>
+			<p>Proceso para Gestión de Despegues.</p>
+			<p><a class="btn btn-outline-dark" href="@Url.Action("Despegue", "Home")">Ingresar &raquo;</a></p>
+		</section>
+		<section class="col-md-3" aria-labelledby="librariesTitle">
+			<h2 id="librariesTitle">Aterrizaje de Aviones</h2>
+			<p>Gestión de Despegues de Aviones.</p>
+			<p><a class="btn btn-outline-dark" href="@Url.Action("Aterrizaje", "Home")">Ingresar &raquo;</a></p>
+		</section>
+	</div>
